@@ -1,0 +1,21 @@
+$color-primary: #fff;
+$color-secondary: #b2b2b2;
+$color-box: rgba(255, 255, 255, 0.04);
+$border-purple: #4a69bb;
+$background-purple-gradient: linear-gradient(
+  111.3deg,
+  rgb(74, 105, 187) 9.6%,
+  rgb(171, 77, 205) 93.6%
+);
+
+h1 {
+  font-size: 2.8rem;
+}
+h2 {
+  font-size: 2rem;
+}
+
+h1,
+h2 {
+  color: $color-primary;
+}

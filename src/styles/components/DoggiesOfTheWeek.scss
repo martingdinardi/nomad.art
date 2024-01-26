@@ -1,0 +1,33 @@
+.doggies-of-the-week {
+  padding: 1rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    .card {
+      animation: none;
+      &__close-attributes {
+        display: none;
+      }
+      &__content {
+        width: 19rem;
+        &--img img {
+          height: 16rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 839px) {
+  .doggies-of-the-week {
+    padding: 2rem 0;
+    align-items: center;
+    &__cards {
+      justify-content: center;
+    }
+  }
+}
