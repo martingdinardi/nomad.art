@@ -6,7 +6,7 @@
 </template>
 <style>
 .stars {
-  height: 100%;
+  height: -webkit-fill-available;
   width: 100vw;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   position: fixed;
