@@ -1,0 +1,98 @@
+@import "../../styles/global.scss";
+
+.navbar {
+  height: 5rem;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $color-primary;
+  font-size: 0.9rem;
+
+  &--links {
+    ul {
+      .disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: $color-primary;
+        background: linear-gradient(
+          to right,
+          rgb(255, 0, 0),
+          rgb(234, 0, 255),
+          rgb(103, 27, 141)
+        );
+        background-size: 0 3px, 100% 3px;
+        background-position: 0% 100%, 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size 200ms;
+
+        &:hover {
+          background-size: 100% 3px, 0 3px;
+        }
+      }
+
+      display: flex;
+      gap: 2.5rem;
+    }
+  }
+
+  &--logo {
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+
+    img {
+      width: 3rem;
+      height: auto;
+    }
+
+    h3 {
+      font-size: 0.8rem;
+      letter-spacing: 0.25rem;
+    }
+  }
+
+  &--social-media {
+    display: flex;
+    gap: 2rem;
+
+    img {
+      width: 1.5rem;
+      filter: invert(99%) sepia(100%) saturate(0%) hue-rotate(26deg)
+        brightness(106%) contrast(101%);
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.2);
+        transition: all 100ms ease-in-out;
+      }
+    }
+  }
+}
+
+.responsive-navbar {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .navbar > .navbar--links {
+    display: none;
+  }
+  .responsive-navbar {
+    display: block;
+    ul {
+      gap: 1rem;
+    padding: 0;
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    flex-flow: wrap;
+    font-size: 15px;
+    }
+  }
+}
